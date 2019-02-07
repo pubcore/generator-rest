@@ -35,7 +35,16 @@ module.exports = class extends Generator {
 		}])
 	}
 	writing(){
-		//static files
+		//beware handling of ignore files
+		this.fs.copy(
+			this.templatePath('_gitignore'),
+			this.destinationPath('.gitignore')
+		)
+		this.fs.copy(
+			this.templatePath('_npmignore'),
+			this.destinationPath('.npmignore')
+		)
+		//all other static files
 		this.fs.copy(
 			this.templatePath('static/**'),
 			this.destinationPath('.'),
