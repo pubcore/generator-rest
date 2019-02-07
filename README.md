@@ -28,4 +28,4 @@
 
 3) execute
 
-		yo @pubcore/ui
+		yo @pubcore/rest
