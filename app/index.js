@@ -37,7 +37,7 @@ module.exports = class extends Generator {
 	writing(){
 		//static files
 		this.fs.copy(
-			this.templatePath('static/**/*'),
+			this.templatePath('static/**'),
 			this.destinationPath('.'),
 			{globOptions:{dot:true}}
 		)
