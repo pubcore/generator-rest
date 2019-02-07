@@ -14,7 +14,7 @@
 * testing via express and mocha
 
 ### Install it global
-	npm install -g yo @pubcore/generator-ui
+	npm install -g yo @pubcore/generator-rest
 
 ### How to use
 1) create a directory  
