@@ -10,7 +10,6 @@
 
 ### It will create/setup minimum package structure to support
 * eslint
-* babel transpiler
 * testing via express and mocha
 
 ### Install it global

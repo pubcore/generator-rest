@@ -60,9 +60,8 @@ module.exports = class extends Generator {
 	install(){
 		this.log('Install packages ...')
 		this.npmInstall([
-			'babel-cli', 'babel-plugin-transform-object-rest-spread',
-			'babel-preset-env', 'chai', 'chai-http', 'eslint',
-			'eslint-plugin-mocha', 'express', 'mocha', 'nyc'
+			'chai', 'chai-http', 'eslint', 'eslint-plugin-mocha', 'express',
+			'mocha', 'nyc'
 		], {'save-dev': true })
 	}
 }
