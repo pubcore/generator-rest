@@ -1,19 +1,19 @@
 {
-  "scripts": {
-    "test": "nyc --reporter=text mocha --inspect --recursive",
-    "coverage": "nyc report --reporter=text-lcov"
-  },
-  "main": "js/index.js",
-  "license": "<%= license %>",
-  "name": "<%= name %>",
-  "version": "1.0.0",
-  "description": "<%= description %>",
-  "repository": {
-    "type": "git",
-    "url": "<%= repository %>"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "author": "<%= author %>"
+	"scripts": {
+		"test": "nyc --reporter=text mocha --inspect --recursive",
+		"coverage": "nyc report --reporter=text-lcov"
+	},
+	"main": "js/index.js",
+	"license": "<%= license %>",
+	"name": "<%= name %>",
+	"version": "1.0.0",
+	"description": "<%= description %>",
+	"repository": {
+		"type": "git",
+		"url": "<%= repository %>"
+	},
+	"directories": {
+		"test": "test"
+	},
+	"author": "<%= author %>"
 }
