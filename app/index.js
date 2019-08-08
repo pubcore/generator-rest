@@ -1,6 +1,7 @@
 var Generator = require('yeoman-generator'),
 	updateNotifier = require('update-notifier'),
-	pkg = require('../package.json')
+	pkg = require('../package.json'),
+	{basename, resolve} = require('path')
 
 updateNotifier({pkg}).notify()
 
@@ -9,17 +10,13 @@ module.exports = class extends Generator {
 		super(args, opts)
 	}
 	initializing(){
-		this.parentDir = __dirname
+		this.scope = basename(resolve(process.cwd(), '..'))
 	}
 	async prompting() {
 		this.answers = await this.prompt([{
-			type: 'input', name: 'scope',
-			message: 'Your scope (without @)',
-		},{
-			type    : 'input', name    : 'name',
-			message : 'Your project name',
-			default : ({scope}) => (scope ? `@${scope}/` : '')
-				+ this.appname.replace(/\s+/g, '-')
+			type: 'input', name: 'name',
+			message: 'Your project name (push enter to use default)',
+			default: () => `@${this.scope}/${this.appname.replace(/\s+/g, '-')}`
 		},{
 			type: 'input', name: 'description',
 			message: 'Package description',
@@ -28,6 +25,7 @@ module.exports = class extends Generator {
 			message: 'License',
 		},{
 			type: 'input', name: 'author',
+			default: () => this.scope,
 			message: 'Author',
 		},{
 			type: 'input', name: 'repository',
