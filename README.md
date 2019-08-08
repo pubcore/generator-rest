@@ -5,10 +5,9 @@
 ### Prerequisites
 * latest version of nodejs
 * latest version of npm
-* optional (Install will succeed without this, too):  
-@pubcore/node-composition installed and context_path is added in config.json
 
-### It will create/setup minimum package structure to support
+### It will create/setup minimum package structure for
+* pubcore component for a @pubcore/node-composition
 * eslint
 * testing via express and mocha
 
