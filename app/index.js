@@ -58,8 +58,7 @@ module.exports = class extends Generator {
   install(){
     this.log('Install packages ...')
     this.npmInstall([
-      'chai', 'chai-http', 'eslint', 'eslint-plugin-mocha', 'express',
-      'mocha', 'nyc'
+      'chai', 'chai-http', 'eslint', 'express', 'mocha', 'nyc'
     ], {'save-dev': true })
   }
 }
