@@ -1,6 +1,6 @@
 {
   "name": "@pubcore/generator-rest",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "create package scaffolding for pubcore rest component",
   "files": [
     "app"
