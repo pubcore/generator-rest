@@ -10,20 +10,26 @@
 * pubcore component for a @pubcore/node-composition
 * eslint
 * testing via express and mocha
-
-### Install it global
-	npm install -g yo @pubcore/generator-rest
+* coverage via nyc
 
 ### How to use
-1) create a directory  
+1) create a directory
 (convention: lower case, dash-separated)
-
-		mkdir my-api
+```
+mkdir my-api
+```
 
 2) and change into it
-
-		cd my-api
+```
+cd my-api
+```
 
 3) execute
+```
+npx -p yo -p @pubcore/generator-rest yo @pubcore/rest
+```
 
-		yo @pubcore/rest
+4) (optional) execute prepared test example to check installation
+```
+npm run test
+```
